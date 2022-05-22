@@ -34,8 +34,11 @@ export class TodoComponent {
     if(this.displayAll){
       return this.model.items;
     }
-
     return this.model.items.filter(item=> item.action == false);
-
   }
+
+  displayCount(){
+    return this.model.items.filter(i=>i.action).length;
+  }
+
 }
